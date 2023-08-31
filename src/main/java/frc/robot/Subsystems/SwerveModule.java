@@ -96,7 +96,7 @@ public class SwerveModule {
         SwerveModuleState.optimize(desiredState, new Rotation2d(m_turningEncoder.getVoltage()*Math.PI*2/4.95));
 
     // Calculate the drive output from the drive PID controller.
-    final double driveOutput = state.speedMetersPerSecond * 0.1;
+    final double driveOutput = state.speedMetersPerSecond * 0.2;
         //m_drivePIDController.calculate(m_driveEncoder.getRate(), state.speedMetersPerSecond);
 
     final double driveFeedforward = m_driveFeedforward.calculate(state.speedMetersPerSecond);
